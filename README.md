@@ -1,14 +1,14 @@
-canvas 
-======
+#canvas
+
 花了一些时间研究了这个h5的新属性，发现还是蛮有意思。然后就自己捣鼓了一个小游戏，其实canvas就是一个画布，主要用js。所以不论干什么滴都要学好js啊！<br>
 
 以下是我循序渐进做的一些小东西：<br>
 
-canvas时钟 （主要用画图的各个属性）：[效果展示](http://xuekeke.site/index.html)
+* canvas时钟 （主要用画图的各个属性）：[效果展示](http://xuekeke.site/index.html)
 
-canvas实现刮刮乐效果 （画图+Image）：[效果展示](http://xuekeke.site/canvas2.html)
+* canvas实现刮刮乐效果 （画图+Image）：[效果展示](http://xuekeke.site/canvas2.html)
 
-canvas小游戏铲屎官的日常（画图+Image）：[效果展示](http://xuekeke.site/canvas3.html)
+* canvas小游戏铲屎官的日常（画图+Image）：[效果展示](http://xuekeke.site/canvas3.html)
 
 步骤简单如下：<br>
 1.在html中放入<canvas></canvas>，给这个标签设好id。然后就奔向js了；
