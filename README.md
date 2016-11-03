@@ -4,7 +4,7 @@
 
 以下是我循序渐进做的一些小东西：<br>
 
-* canvas时钟 （主要用画图的各个属性）：[效果展示](http://xuekeke.site/index.html)
+* canvas时钟 （主要用画图的各个属性）：[效果展示](http://xuekeke.site/canvas1.html)
 
 * canvas实现刮刮乐效果 （画图+Image）：[效果展示](http://xuekeke.site/canvas2.html)
 
