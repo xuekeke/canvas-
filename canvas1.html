@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>h5时钟</title>
+</head>
+<body>
+	<canvas id="canvas" style="border:2px solid #eee"></canvas>
+<script type="text/javascript">
+	var canvas=document.getElementById("canvas");
+	var ctx=canvas.getContext("2d");
+	canvas.width=600;
+	canvas.height=600;
+	function draw(){
+		ctx.clearRect(0,0,600,600);
+		var date=new Date();
+		var h=date.getHours()%12;
+		var m=date.getMinutes();
+		var s=date.getSeconds();
+		ctx.beginPath();
+		ctx.strokeStyle="#000";
+		ctx.lineWidth=5;
+		ctx.arc(300,300,150,0,Math.PI*2,false);
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.fillStyle="#000";
+		ctx.arc(300,300,3,0,Math.PI*2,false)
+		ctx.fill();
+
+		for(i=0;i<12;i++){
+		ctx.save();
+		ctx.strokeStyle="#000";
+		ctx.lineWidth=4;
+		ctx.beginPath();
+		ctx.translate(300,300);
+		ctx.rotate(30*i*Math.PI/180)
+		ctx.moveTo(0,-130);
+		ctx.lineTo(0,-140);
+		ctx.stroke();
+		ctx.closePath();
+		ctx.restore();			
+		}
+		for(i=0;i<60;i++){
+		ctx.save();
+		ctx.strokeStyle="#000";
+		ctx.lineWidth=2;
+		ctx.beginPath();
+		ctx.translate(300,300);
+		ctx.rotate(6*i*Math.PI/180)
+		ctx.moveTo(0,-135);
+		ctx.lineTo(0,-140);
+		ctx.stroke();
+		ctx.closePath();
+		ctx.restore();			
+		}
+		//s
+		ctx.save();
+		ctx.strokeStyle="#000";
+		ctx.lineWidth=3;
+		ctx.beginPath()
+		ctx.translate(300,300);
+		ctx.rotate(s*6*Math.PI/180)
+		ctx.moveTo(0,15);
+		ctx.lineTo(0,-100);
+		ctx.stroke();
+		ctx.closePath();
+		ctx.restore();
+		//m
+		ctx.save();
+		ctx.strokeStyle="#000";
+		ctx.lineWidth=4;
+		ctx.beginPath();
+		ctx.translate(300,300);
+		ctx.rotate(m*6*Math.PI/180);
+		ctx.moveTo(0,10);
+		ctx.lineTo(0,-80);
+		ctx.stroke();
+		ctx.closePath();
+		ctx.restore();
+		//h
+		ctx.save();
+		ctx.strokeStyle="#000";
+		ctx.lineWidth=6;
+		ctx.beginPath();
+		ctx.translate(300,300);
+		ctx.rotate((h*30+m*0.5)*Math.PI/180)
+		ctx.moveTo(0,5);
+		ctx.lineTo(0,-50);
+		ctx.stroke();
+		ctx.closePath();
+		ctx.restore();
+	}
+	setInterval(draw,1000);
+</script>
+</body>
+</html>
